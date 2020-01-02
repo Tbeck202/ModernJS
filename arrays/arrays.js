@@ -18,3 +18,21 @@ let topSongs = [ 'First Time Ever I Saw Your Face', 'God Only Knows', 'A Day In 
 
 topSongs.push('Fortunate Son');
 console.log(topSongs);
+
+//SHIFT AND UNSHIFT
+//SHIFT REMOVES THE DATA FROM THE ZERO INDEX AND PUSHES THE REST O FTHE DATA TO THE INDEX TO THE LEFT
+//UNSHIFT PUTS DATA INTO ZERO INDEX OF ARRAY AND PUSHES THE REST OF THE DATA TO THE INDEX TO THE RIGHT
+//UNSHIFT CAN TAKE MULTIPLE ARGUMENTS - array.unshift(data, moreData, evenMoreData)
+
+let dishesToDo = [ 'Big Platter' ];
+
+dishesToDo.unshift('Plate');
+console.log(dishesToDo);
+dishesToDo.unshift('Cup');
+console.log(dishesToDo);
+dishesToDo.unshift('Spoon');
+console.log(dishesToDo);
+
+let dish = dishesToDo.shift([ 0 ]);
+console.log(dish);
+console.log(dishesToDo);
