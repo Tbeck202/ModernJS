@@ -13,3 +13,11 @@ function isValidPw(username, password) {
 	const containsUsername = password.indexOf(username) !== -1;
 	return !checkLength && !hasSpace && !containsUsername; // this line evaluates to true or false
 }
+
+function average(nums) {
+	let sum = 0;
+	for (let i = 0; i <= nums.length; i++) {
+		sum += nums[i];
+	}
+	console.log(sum);
+}
