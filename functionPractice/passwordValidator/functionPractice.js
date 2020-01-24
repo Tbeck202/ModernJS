@@ -16,8 +16,20 @@ function isValidPw(username, password) {
 
 function average(nums) {
 	let sum = 0;
-	for (let i = 0; i <= nums.length; i++) {
+	for (let i = 0; i < nums.length; i++) {
 		sum += nums[i];
 	}
-	console.log(sum);
+	return (avg = sum / nums.length);
+}
+
+function isPangram(sentence) {
+	const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+
+	let check = sentence.toLowerCase();
+	for (let letter of alphabet) {
+		if (!check.includes(letter)) {
+			return false;
+		}
+	}
+	return true;
 }
