@@ -71,3 +71,15 @@ function multiplyBy(num) {
 const triple = multiplyBy(3);
 const double = multiplyBy(2);
 const halve = multiplyBy(0.5);
+
+function makeBetweenFunc(x, y) {
+	return function(num) {
+		return num >= x && num <= y;
+	};
+}
+
+const isChild = makeBetweenFunc(0, 18);
+
+const isNineties = makeBetweenFunc(1990, 1999);
+
+const isNiceWeather = makeBetweenFunc(60, 79);
