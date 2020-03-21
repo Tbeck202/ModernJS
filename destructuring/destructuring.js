@@ -29,7 +29,14 @@ const runner = {
 	title: 'Elder of the Order of the Golden Heart of Kenya'
 };
 
-const { firstName, lastName, time } = runner;
+const runner2 = {
+	firstName: 'Mike',
+	lastName: 'Michaelson',
+	country: 'Kenya',
+	title: 'Mr.'
+};
+
+// const { firstName, lastName, time } = runner;
 //firstName = Eliud
 //lastName = Kipchoge
 //time = undefined
@@ -58,6 +65,7 @@ const house = {
 
 const { address, price, sqFt, ...areaData } = house;
 
+//DESTRUCTURING NESTED DATA=============
 const results = [
 	{
 		first: 'Eliud',
@@ -77,3 +85,16 @@ const results = [
 ];
 
 const [ { first: goldWinner }, { country } ] = results;
+
+//DESTRUCTURE PARAMETERS
+
+function print({ firstName, lastName, title }) {
+	console.log(`${firstName} ${lastName}, ${title}`);
+}
+
+//DESTRUCTURE PARAMETERS WITH ARRAY
+const response = [ 'HTTP/1.1', '200 OK', 'application/json' ];
+
+function parseResponse([ protocol, statusCode, contentType ]) {
+	console.log(`Status: ${statusCode}`);
+}
