@@ -53,9 +53,23 @@ const fakeRequest = (url) => {
 	});
 };
 
-fakeRequest('/users').then((res) => {
-	console.log(res.data);
-});
+fakeRequest('/users')
+	.then((res) => {
+		console.log(res);
+		const id = res.data[0].id;
+		return fakeRequest(`/users/${id}`);
+	})
+	.then((res) => {
+		console.log(res);
+		const postId = res.data.topPostId;
+		return fakeRequest(`/posts/${postId}`);
+	})
+	.then((res) => {
+		console.log(res);
+	})
+	.catch((err) => {
+		console.log(`Oh no!`, err);
+	});
 
 // const btn = document.querySelector('button');
 
